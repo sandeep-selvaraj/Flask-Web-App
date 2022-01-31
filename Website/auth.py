@@ -28,6 +28,6 @@ def sign_up():
         elif len(password1) < 7:
             flash('Password must be greater than 6 characters', category='error')
         else:
-            new_user = User(email=email)
+            new_user = User(email=email, firstName=firstName)
             flash('Account Created!', category='success')
     return render_template("sign_up.html") 
